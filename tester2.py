@@ -36,14 +36,14 @@ def identify(imagePath):
             continue
         fr.put_text(test_img,predicted_name,x,y)
 
-    resized_img=cv2.resize(test_img,(1000,1000))
-    cv2.imshow("Face detection",resized_img)
-    cv2.waitKey(0)#Waits indefinitely until a key is pressed
-    cv2.destroyAllWindows
+testImage = 'TestImages/Darpan.jpg'    
 
 identify('TestImages/Darpan.jpg')
 
-
+resized_img=cv2.resize(testImage,(1000,1000))
+cv2.imshow("Face detection",resized_img)
+cv2.waitKey(0)#Waits indefinitely until a key is pressed
+cv2.destroyAllWindows
 
 
 
