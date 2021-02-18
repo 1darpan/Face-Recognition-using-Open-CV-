@@ -3,7 +3,15 @@ import os
 import os.path
 import numpy as np
 import faceRecognition as fr
+l2=[]
+for path,subdirnames,filenames in os.walk('C:\\Users\darpa\Documents\GitHub\Face-Recognition-using-Open-CV-\\trainingImages'):
+        for filename in filenames:
+            id=os.path.basename(path)#fetching subdirectory names
+            img_path=os.path.join(path,filename)#fetching image path
 
+            dict={'identifier':id,'image':img_path}
+            l2.append(dict)
+        print(l2)
 
 path_of_model = 'C:\\Users\darpa\Documents\GitHub\Face-Recognition-using-Open-CV-/trainingData.yml'
 
